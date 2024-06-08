@@ -44,4 +44,13 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<Enemy>().TakeDamage(1);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            CoinManager.Instance.AddCoin();
+            Destroy(other.gameObject);
+        }
+    }
 }
