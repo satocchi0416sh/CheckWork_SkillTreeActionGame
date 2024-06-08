@@ -19,7 +19,7 @@ public class Skill : MonoBehaviour
         _button.onClick.AddListener(Unlock);
     }
 
-    private void Unlock()
+    public void Unlock()
     {
         if (CheckRequirements())
         {

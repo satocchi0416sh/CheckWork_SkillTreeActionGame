@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Attack2
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 1252774225}
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Attack3
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 129712895}
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Heal3
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 1561968876}
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Defence1
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 0}
@@ -2242,7 +2242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Defence2
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 629473695}
@@ -2380,7 +2380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Attack1
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 0}
@@ -2594,7 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Heal1
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 0}
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Heal2
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 1330830447}
@@ -3486,6 +3486,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849017220eda74d6482e36f808a3af5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allSkills:
+  - {fileID: 1252774225}
+  - {fileID: 129712895}
+  - {fileID: 203758899}
+  - {fileID: 629473695}
+  - {fileID: 1245646049}
+  - {fileID: 1912607341}
+  - {fileID: 1330830447}
+  - {fileID: 1561968876}
+  - {fileID: 231215696}
   unlockedSkills: []
   skillTreePanel: {fileID: 2055927714}
 --- !u!4 &1700888521
@@ -3729,7 +3739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29587ea7fce714e759c49b0d87df1f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Defence3
   skillCost: 10
   unlocked: 0
   requiredSkill: {fileID: 1245646049}

@@ -2,11 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillTreeManager : MonoBehaviour
 {
     public static SkillTreeManager Instance { get; private set; }
+    
+    [SerializeField] private List<Skill> allSkills = new List<Skill>();
     public List<Skill> unlockedSkills = new List<Skill>();
+    
     [SerializeField] private GameObject skillTreePanel;
     
     private void Awake()
@@ -30,6 +34,7 @@ public class SkillTreeManager : MonoBehaviour
     private void Start()
     {
         skillTreePanel.SetActive(false);
+        Load();
     }
 
     private void Update()
@@ -37,6 +42,31 @@ public class SkillTreeManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             skillTreePanel.SetActive(!skillTreePanel.activeSelf);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Save();
+    }
+    
+    private void Save()
+    {
+        foreach (Skill skill in unlockedSkills)
+        {
+            PlayerPrefs.SetInt(skill.skillName, 1);
+        }
+    }
+    
+    private void Load()
+    {
+        foreach (Skill skill in allSkills)
+        {
+            if (PlayerPrefs.HasKey(skill.skillName))
+            {
+                skill.unlocked = true;
+                skill.GetComponent<Image>().color = Color.green;
+            }
         }
     }
 }

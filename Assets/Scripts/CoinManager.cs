@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,12 @@ public class CoinManager : MonoBehaviour
         }
     }
     // ------------------------------------------------------------
-    
+
+    private void Start()
+    {
+        Load();
+    }
+
     private void Update()
     {
         coinText.text = $"コイン: {_coinCount}";
@@ -56,5 +62,20 @@ public class CoinManager : MonoBehaviour
         {
             _coinCount += 10;
         }
+    }
+    
+    private void OnDestroy()
+    {
+        Save();
+    }
+    
+    private void Save()
+    {
+        PlayerPrefs.SetInt("CoinCount", _coinCount);
+    }
+    
+    private void Load()
+    {
+        _coinCount = PlayerPrefs.GetInt("CoinCount", 0);
     }
 }
